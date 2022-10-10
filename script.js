@@ -11,20 +11,47 @@ const oito = document.querySelector('#oito')
 const nove = document.querySelector('#nove')
 
 
-zero.addEventListener('click', ex)
-um.addEventListener('click', ex)
-dois.addEventListener('click', ex)
-tres.addEventListener('click', ex)
-quatro.addEventListener('click', ex)
-cinco.addEventListener('click', ex)
-seis.addEventListener('click', ex)
-sete.addEventListener('click', ex)
-oito.addEventListener('click', ex)
-nove.addEventListener('click', ex)
+zero.addEventListener('click', addZero)
+um.addEventListener('click', addUm)
+dois.addEventListener('click', addDois)
+tres.addEventListener('click', addTres)
+quatro.addEventListener('click', addQuatro)
+cinco.addEventListener('click', addCinco)
+seis.addEventListener('click', addSeis)
+sete.addEventListener('click', addSete)
+oito.addEventListener('click', addOito)
+nove.addEventListener('click', addNove)
 
 // Resultado
 const resultado = document.querySelector('#resultado')
 
-function ex () {
-  resultado.innerHTML += 'isso'
+function addZero() {
+  resultado.innerHTML += `${zero.innerHTML}`
+}
+function addUm() {
+  resultado.innerHTML += `${um.innerHTML}`
+}
+function addDois() {
+  resultado.innerHTML += `${dois.innerHTML}`
+}
+function addTres() {
+  resultado.innerHTML += `${tres.innerHTML}`
+}
+function addQuatro() {
+  resultado.innerHTML += `${quatro.innerHTML}`
+}
+function addCinco() {
+  resultado.innerHTML += `${cinco.innerHTML}`
+}
+function addSeis() {
+  resultado.innerHTML += `${seis.innerHTML}`
+}
+function addSete() {
+  resultado.innerHTML += `${sete.innerHTML}`
+}
+function addOito() {
+  resultado.innerHTML += `${oito.innerHTML}`
+}
+function addNove() {
+  resultado.innerHTML += `${nove.innerHTML}`
 }
