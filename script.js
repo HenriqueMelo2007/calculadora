@@ -10,26 +10,36 @@ const sete = document.querySelector('#sete')
 const oito = document.querySelector('#oito')
 const nove = document.querySelector('#nove')
 
-zero.addEventListener('click', () => add(0))
-um.addEventListener('click', () => add(1))
-dois.addEventListener('click', () => add(2))
-tres.addEventListener('click', () => add(3))
-quatro.addEventListener('click', () => add(4))
-cinco.addEventListener('click', () => add(5))
-seis.addEventListener('click', () => add(6))
-sete.addEventListener('click', () => add(7))
-oito.addEventListener('click', () => add(8))
-nove.addEventListener('click', () => add(9))
+zero.addEventListener('click', () => addValor(0))
+um.addEventListener('click', () => addValor(1))
+dois.addEventListener('click', () => addValor(2))
+tres.addEventListener('click', () => addValor(3))
+quatro.addEventListener('click', () => addValor(4))
+cinco.addEventListener('click', () => addValor(5))
+seis.addEventListener('click', () => addValor(6))
+sete.addEventListener('click', () => addValor(7))
+oito.addEventListener('click', () => addValor(8))
+nove.addEventListener('click', () => addValor(9))
 
 const ponto = document.querySelector('#ponto')
 
-ponto.addEventListener('click', () => add('.'))
-
-
+ponto.addEventListener('click', () => addValor('.'))
 
 // Resultado
 const conta = document.querySelector('#conta')
+const resultado = document.querySelector('#resultado')
 
-function add(value) {
+function addValor(value) {
+  Number(value)
   conta.innerHTML += value
+}
+
+// Limpar
+const botaoLimpar = document.querySelector('#limpar')
+
+botaoLimpar.addEventListener('click', limpeza)
+
+function limpeza() {
+  conta.innerHTML = ''
+  resultado.innerHTML = ''
 }
