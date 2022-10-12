@@ -1,3 +1,5 @@
+let componentesDaOperacao = []
+
 // Números
 const zero = document.querySelector('#zero')
 const um = document.querySelector('#um')
@@ -25,14 +27,33 @@ const ponto = document.querySelector('#ponto')
 
 ponto.addEventListener('click', () => addValor('.'))
 
+// Operadores aritméticos
+const divisao = document.querySelector('#divisao')
+const multiplicacao = document.querySelector('#multiplicacao')
+const subtracao = document.querySelector('#subtracao')
+const soma = document.querySelector('#soma')
+
+divisao.addEventListener('click', () => addOperador('/'))
+
 // Resultado
 const conta = document.querySelector('#conta')
 const resultado = document.querySelector('#resultado')
 
-function addValor(value) {
-  Number(value)
-  conta.innerHTML += value
+function addValor(valor) {
+  Number(valor)
+  conta.innerHTML += valor
 }
+
+function addOperador(operador) {
+  componentesDaOperacao.push(conta.innerHTML)
+  conta.innerHTML += operador
+  componentesDaOperacao.push(operador)
+}
+
+console.log(componentesDaOperacao)
+
+
+
 
 // Limpar
 const botaoLimpar = document.querySelector('#limpar')
@@ -43,9 +64,3 @@ function limpeza() {
   conta.innerHTML = ''
   resultado.innerHTML = ''
 }
-
-// Operadores aritméticos
-const divisao = document.querySelector('#divisao')
-const multiplicacao = document.querySelector('#multiplicacao')
-const subtracao = document.querySelector('#subtracao')
-const soma = document.querySelector('#soma')
