@@ -24,7 +24,6 @@ oito.addEventListener('click', () => addValor(8))
 nove.addEventListener('click', () => addValor(9))
 
 const ponto = document.querySelector('#ponto')
-
 ponto.addEventListener('click', () => addValor('.'))
 
 // Operadores aritméticos
@@ -34,11 +33,17 @@ const subtracao = document.querySelector('#subtracao')
 const soma = document.querySelector('#soma')
 
 divisao.addEventListener('click', () => addOperador('/'))
+multiplicacao.addEventListener('click', () => addOperador('*'))
+subtracao.addEventListener('click', () => addOperador('-'))
+soma.addEventListener('click', () => addOperador('+'))
 
-// Resultado
+const igualdade = document.querySelector('#igualdade')
+
+// Resultado no HTML
 const conta = document.querySelector('#conta')
 const resultado = document.querySelector('#resultado')
 
+// Funções
 function addValor(valor) {
   Number(valor)
   conta.innerHTML += valor
@@ -51,6 +56,14 @@ function addOperador(operador) {
 }
 
 console.log(componentesDaOperacao)
+
+
+
+
+
+
+
+
 
 
 
