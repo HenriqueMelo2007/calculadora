@@ -28,8 +28,8 @@ ponto.addEventListener('click', () => add('.'))
 
 
 // Resultado
-const resultado = document.querySelector('#resultado')
+const conta = document.querySelector('#conta')
 
 function add(value) {
-  resultado.innerHTML += value
+  conta.innerHTML += value
 }
