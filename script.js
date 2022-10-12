@@ -43,3 +43,9 @@ function limpeza() {
   conta.innerHTML = ''
   resultado.innerHTML = ''
 }
+
+// Operadores aritméticos
+const divisao = document.querySelector('#divisao')
+const multiplicacao = document.querySelector('#multiplicacao')
+const subtracao = document.querySelector('#subtracao')
+const soma = document.querySelector('#soma')
