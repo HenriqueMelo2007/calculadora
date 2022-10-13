@@ -39,6 +39,8 @@ soma.addEventListener('click', () => addOperador('+'))
 
 const igualdade = document.querySelector('#igualdade')
 
+igualdade.addEventListener('click', resultadoFinal)
+
 // Resultado no HTML
 const conta = document.querySelector('#conta')
 const resultado = document.querySelector('#resultado')
@@ -51,13 +53,18 @@ function addValor(valor) {
 
 function addOperador(operador) {
   componentesDaOperacao.push(conta.innerHTML)
-  conta.innerHTML += operador
   componentesDaOperacao.push(operador)
+  conta.innerHTML = ''
 }
-
 console.log(componentesDaOperacao)
 
+function resultadoFinal() {
+  componentesDaOperacao.push(conta.innerHTML)
+  conta.innerHTML = ''
 
+  for (elements of componentesDaOperacao)
+  console.log(elements)
+}
 
 
 
