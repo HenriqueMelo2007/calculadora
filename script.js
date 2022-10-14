@@ -1,4 +1,6 @@
 let componentesDaOperacao = []
+let valorDaOperacao = ''
+let operadorAritmeticoDaOperacao = ''
 
 // Números
 const zero = document.querySelector('#zero')
@@ -47,13 +49,13 @@ const operacao = document.querySelector('#operacao')
 // Funções
 function addValor(valor) {
   visualizacaoDaOperacao.innerHTML += valor
-  operacao.innerHTML += valor
+  valorDaOperacao += valor
 }
 
 function addOperador(operador) {
   visualizacaoDaOperacao.innerHTML += operador
 
-  componentesDaOperacao.push(operacao.innerHTML)
+  componentesDaOperacao.push(valorDaOperacao)
 
   if (componentesDaOperacao.length == 3) {
     let valor1 = componentesDaOperacao[0]
@@ -67,12 +69,12 @@ function addOperador(operador) {
   }
 
   componentesDaOperacao.push(operador)
-  operacao.innerHTML = ''
+  valorDaOperacao = ''
 }
 
 function resultadoFinal() {
-  componentesDaOperacao.push(operacao.innerHTML)
-  operacao.innerHTML = ''
+  componentesDaOperacao.push(valorDaOperacao)
+  valorDaOperacao = ''
 
   let valor1 = componentesDaOperacao[0]
   let operadorAritmetico = componentesDaOperacao[1]
@@ -81,7 +83,8 @@ function resultadoFinal() {
   let resultado = eval(valor1 + operadorAritmetico + valor2)
 
   componentesDaOperacao = []
-  operacao.innerHTML = resultado
+  valorDaOperacao = resultado
+  operacao.innerHTML = valorDaOperacao
 }
 
 // Limpar
@@ -91,5 +94,6 @@ botaoLimpar.addEventListener('click', limpeza)
 function limpeza() {
   visualizacaoDaOperacao.innerHTML = ''
   operacao.innerHTML = ''
+  valorDaOperacao = ''
   componentesDaOperacao = []
 }
