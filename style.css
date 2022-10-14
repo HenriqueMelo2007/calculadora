@@ -94,3 +94,21 @@ button:hover {
 #zero {
   width: 49.33%;
 }
+
+@media (max-width: 1090px) {
+  .calculadora {
+    width: 60%;
+  }
+}
+
+@media (max-width: 895px) {
+  .calculadora {
+    width: 80%;
+  }
+}
+
+@media (max-width: 560px) {
+  .calculadora {
+    width: 95%;
+  }
+}
