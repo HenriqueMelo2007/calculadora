@@ -50,6 +50,18 @@ function addValor(valor) {
 
 function addOperador(operador) {
   componentesDaOperacao.push(operacao.innerHTML)
+
+  if (componentesDaOperacao.length == 3) {
+    let valor1 = componentesDaOperacao[0]
+    let operadorAritmetico = componentesDaOperacao[1]
+    let valor2 = componentesDaOperacao[2]
+  
+    let resultado = eval(valor1 + operadorAritmetico + valor2)
+  
+    componentesDaOperacao.splice(0, 3)
+    componentesDaOperacao.push(resultado)
+  }
+
   componentesDaOperacao.push(operador)
   operacao.innerHTML = ''
 }
@@ -76,5 +88,3 @@ function limpeza() {
   operacao.innerHTML = ''
   componentesDaOperacao = []
 }
-
-console.log(componentesDaOperacao)
