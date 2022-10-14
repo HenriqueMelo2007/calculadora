@@ -1,5 +1,10 @@
+// Array que armazena os principais valores
 let componentesDaOperacao = []
+
+// Variável que armazena valores numéricos
 let valorDaOperacao = ''
+
+// Variável que armazena os operadores aritméticos
 let operadorAritmeticoDaOperacao = ''
 
 // Números
@@ -46,12 +51,13 @@ igualdade.addEventListener('click', resultadoFinal)
 const visualizacaoDaOperacao = document.querySelector('#visualizacao-da-operacao')
 const operacao = document.querySelector('#operacao')
 
-// Funções
+// Função para mostrar ao usuário o valor numérico digitado e também armazená-lo em uma variável
 function addValor(valor) {
   visualizacaoDaOperacao.innerHTML += valor
   valorDaOperacao += valor
 }
 
+// Função que mostra ao usuário o operador aritmético digitado. Envia o valor anteriormente armazenado na variável para o array principal. Verifica se a quantidade de itens do array é igual a 3, e caso seja efetua um cálculo e o exibe no HTML interno do elemento 'operacao'. Armazena o operador aritmético em uma variável e 'limpa' a variável de valor numérico para que ela possa receber novos valores
 function addOperador(operador) {
   visualizacaoDaOperacao.innerHTML += operador
 
@@ -74,6 +80,7 @@ function addOperador(operador) {
   valorDaOperacao = ''
 }
 
+// Função que torna vazio o HTML interno da 'visualizacaoDaOperacao'. Envia o conteúdo da variável de valor para o array e a deixa vazia em seguida. Efetua um cálculo. Esvazia o array principal. Exibe o valor do cálculo no HTML interno de 'operacao'
 function resultadoFinal() {
   visualizacaoDaOperacao.innerHTML = ''
 
@@ -91,7 +98,7 @@ function resultadoFinal() {
   operacao.innerHTML = valorDaOperacao
 }
 
-// Limpar
+// Limpeza de variável, HTML interno e o array principal
 const botaoLimpar = document.querySelector('#limpar')
 botaoLimpar.addEventListener('click', limpeza)
 
