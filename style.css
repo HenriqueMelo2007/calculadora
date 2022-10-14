@@ -46,7 +46,7 @@ main {
   align-items: flex-end;
 }
 
-#resultado, #conta {
+#operacao {
   color: rgb(0, 0, 0);
 }
 

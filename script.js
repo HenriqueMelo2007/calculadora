@@ -38,49 +38,43 @@ subtracao.addEventListener('click', () => addOperador('-'))
 soma.addEventListener('click', () => addOperador('+'))
 
 const igualdade = document.querySelector('#igualdade')
-
 igualdade.addEventListener('click', resultadoFinal)
 
 // Resultado no HTML
-const conta = document.querySelector('#conta')
-const resultado = document.querySelector('#resultado')
+const operacao = document.querySelector('#operacao')
 
 // Funções
 function addValor(valor) {
-  Number(valor)
-  conta.innerHTML += valor
+  operacao.innerHTML += valor
 }
 
 function addOperador(operador) {
-  componentesDaOperacao.push(conta.innerHTML)
+  componentesDaOperacao.push(operacao.innerHTML)
   componentesDaOperacao.push(operador)
-  conta.innerHTML = ''
+  operacao.innerHTML = ''
 }
-console.log(componentesDaOperacao)
 
 function resultadoFinal() {
-  componentesDaOperacao.push(conta.innerHTML)
-  conta.innerHTML = ''
+  componentesDaOperacao.push(operacao.innerHTML)
+  operacao.innerHTML = ''
 
-  for (elements of componentesDaOperacao)
-  console.log(elements)
+  let valor1 = componentesDaOperacao[0]
+  let operadorAritmetico = componentesDaOperacao[1]
+  let valor2 = componentesDaOperacao[2]
+
+  let resultado = eval(valor1 + operadorAritmetico + valor2)
+
+  componentesDaOperacao = []
+  operacao.innerHTML = resultado
 }
-
-
-
-
-
-
-
-
-
 
 // Limpar
 const botaoLimpar = document.querySelector('#limpar')
-
 botaoLimpar.addEventListener('click', limpeza)
 
 function limpeza() {
-  conta.innerHTML = ''
-  resultado.innerHTML = ''
+  operacao.innerHTML = ''
+  componentesDaOperacao = []
 }
+
+console.log(componentesDaOperacao)
