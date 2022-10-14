@@ -46,8 +46,9 @@ main {
   align-items: flex-end;
 }
 
-#operacao {
+#operacao, #visualizacao-da-operacao {
   color: rgb(0, 0, 0);
+  margin-right: 5px;
 }
 
 .operacoes {

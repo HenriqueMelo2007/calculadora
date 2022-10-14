@@ -41,14 +41,18 @@ const igualdade = document.querySelector('#igualdade')
 igualdade.addEventListener('click', resultadoFinal)
 
 // Resultado no HTML
+const visualizacaoDaOperacao = document.querySelector('#visualizacao-da-operacao')
 const operacao = document.querySelector('#operacao')
 
 // Funções
 function addValor(valor) {
+  visualizacaoDaOperacao.innerHTML += valor
   operacao.innerHTML += valor
 }
 
 function addOperador(operador) {
+  visualizacaoDaOperacao.innerHTML += operador
+
   componentesDaOperacao.push(operacao.innerHTML)
 
   if (componentesDaOperacao.length == 3) {
@@ -85,6 +89,7 @@ const botaoLimpar = document.querySelector('#limpar')
 botaoLimpar.addEventListener('click', limpeza)
 
 function limpeza() {
+  visualizacaoDaOperacao.innerHTML = ''
   operacao.innerHTML = ''
   componentesDaOperacao = []
 }
