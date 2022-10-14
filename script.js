@@ -66,6 +66,8 @@ function addOperador(operador) {
   
     componentesDaOperacao.splice(0, 3)
     componentesDaOperacao.push(resultado)
+
+    operacao.innerHTML = resultado
   }
 
   componentesDaOperacao.push(operador)
@@ -73,6 +75,8 @@ function addOperador(operador) {
 }
 
 function resultadoFinal() {
+  visualizacaoDaOperacao.innerHTML = ''
+
   componentesDaOperacao.push(valorDaOperacao)
   valorDaOperacao = ''
 
