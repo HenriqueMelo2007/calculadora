@@ -10,7 +10,7 @@
 
 > Information:
 
-Calculadora simples capaz de efetuar as quatro operações básicas. Feita para prática de JavaScript e lógica de programação.
+Calculadora simples, capaz de efetuar as quatro operações básicas. Feita para prática de JavaScript e lógica de programação.
 
 ## 🛠 Tecnologias:
 
